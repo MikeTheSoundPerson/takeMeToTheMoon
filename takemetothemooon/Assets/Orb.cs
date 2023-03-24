@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Orb : MonoBehaviour
 {
+    [SerializeField] private StudioEventEmitter collectOrb;
+    public string orbName;
     public GameObject player;
     private Color startColor;
 
@@ -35,6 +38,7 @@ public class Orb : MonoBehaviour
     IEnumerator OnClick()
     {
         isClicked = true;
+        player.GetComponent<Player>().Talk(orbName);
         GetComponent<SpriteRenderer>().color = Color.green;
         yield return new WaitForSeconds(1f);
         GetComponent<SpriteRenderer>().color = startColor;
@@ -46,6 +50,9 @@ public class Orb : MonoBehaviour
         if (other.name == "Player" && !isFollowing)
         {
             isFollowing = true;
+            if(collectOrb != null)
+                collectOrb.Play();
+
             player.GetComponent<PlayerInformation>().numberOfOrbs++;
             FollowPlayer();
         }
