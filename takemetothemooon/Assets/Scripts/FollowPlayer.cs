@@ -9,6 +9,8 @@ public class FollowPlayer : MonoBehaviour
     public float wobbelSpeed = 5f;
     public float moveSpeed = 0.1f;
     private Vector2 position;
+
+    public int number = 0;
     private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +21,7 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        position = Vector2.Lerp(transform.position, player.position + player.right * offset + player.up * Mathf.Sin(Time.time * wobbelSpeed), moveSpeed);
+        position = Vector2.Lerp(transform.position, player.position + -player.right * offset * number + player.up * Mathf.Sin(Time.time * wobbelSpeed + number%3), moveSpeed);
     }
 
     private void FixedUpdate()

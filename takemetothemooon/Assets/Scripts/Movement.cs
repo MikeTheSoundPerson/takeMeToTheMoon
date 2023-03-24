@@ -18,5 +18,15 @@ public class Movement : MonoBehaviour
     {
         var horizontalInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+
+        //change forward direction
+        if (horizontalInput > 0)
+        {
+            transform.rotation = Quaternion.identity;
+        }
+        else if (horizontalInput < 0)
+        {
+            transform.rotation = Quaternion.Euler(0,180,0);
+        }
     }
 }
