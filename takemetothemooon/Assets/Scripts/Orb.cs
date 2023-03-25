@@ -13,6 +13,7 @@ public class Orb : MonoBehaviour
     private Color startColor;
 
     public Sprite orbSprite;
+    public GameObject orbLight;
 
     private bool isClicked = false;
     private bool isFollowing = false;
@@ -31,14 +32,14 @@ public class Orb : MonoBehaviour
         if (!isClicked && isFollowing)
         {
             startColor = GetComponent<SpriteRenderer>().color;
-            GetComponent<SpriteRenderer>().color = Color.red;
+            orbLight.SetActive(true);
         }
     }
 
     void OnMouseExit()
     {
         if (!isClicked && isFollowing)
-        GetComponent<SpriteRenderer>().color = startColor;
+        orbLight.SetActive(false);
     }
 
     void OnMouseDown()
@@ -53,9 +54,11 @@ public class Orb : MonoBehaviour
     IEnumerator OnClick()
     {
         isClicked = true;
-        GetComponent<SpriteRenderer>().color = Color.green;
+        //GetComponent<SpriteRenderer>().color = Color.green;
+        orbLight.SetActive(true);
         yield return new WaitForSeconds(1f);
-        GetComponent<SpriteRenderer>().color = startColor;
+        //GetComponent<SpriteRenderer>().color = startColor;
+        orbLight.SetActive(false);
         isClicked = false;
     }
 
