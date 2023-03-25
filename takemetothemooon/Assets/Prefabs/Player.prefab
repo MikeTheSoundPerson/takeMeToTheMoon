@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 35
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fbe6c24d8d6a6e14e882cda57d51c24d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 8528037814367746647}
   - component: {fileID: 8528037814367746633}
   - component: {fileID: 8528037814367746632}
+  - component: {fileID: 660377744}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -309,7 +310,9 @@ MonoBehaviour:
   walk: {fileID: 8528037814367746633}
   jump: {fileID: 8528037814367746632}
   speed: 10
-  jumpHeight: {x: 0, y: 0}
+  climbingSpeed: 5
+  jumpHeight: {x: 0, y: 15}
+  ClimbingAllowed: 0
 --- !u!114 &8528037814367746646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,3 +399,16 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: -1
   OverrideMaxDistance: -1
+--- !u!114 &660377744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8528037814367746640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d977d8229bc28473eba7c2a7d4d82d81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 8528037814367746645}

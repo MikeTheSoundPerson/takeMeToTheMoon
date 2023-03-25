@@ -56,5 +56,7 @@ public class Player : MonoBehaviour
         return playerInformation.numberOfOrbs;
     }
 
+    
+
 
 }

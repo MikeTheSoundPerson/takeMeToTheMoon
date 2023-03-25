@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Climbing : MonoBehaviour
 {
     private Rigidbody2D rb;
     private float moveSpeed, dirX, dirY;

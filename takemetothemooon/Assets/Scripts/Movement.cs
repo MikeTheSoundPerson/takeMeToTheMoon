@@ -8,11 +8,16 @@ public class Movement : MonoBehaviour
     [SerializeField] private StudioEventEmitter walk;
     [SerializeField] private StudioEventEmitter jump;
     public float speed = 10f;
+    public float climbingSpeed = 5f;
     public Vector2 jumpHeight;
     private float time = 0f;
     private Rigidbody2D rb;
+
+    public bool ClimbingAllowed = false;
     private bool grounded = true;
     private enum MovementState { Idle, Walking, Climbing, Jumping, Falling};
+
+    MovementState movementState = MovementState.Idle;
 
     void Start()
     {
@@ -23,10 +28,12 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MovementState movementState = MovementState.Idle;
+        
 
 
         var horizontalInput = Input.GetAxisRaw("Horizontal");
+        var verticalInput = Input.GetAxisRaw("Vertical");
+        
         rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
 
         //change forward direction
@@ -46,6 +53,8 @@ public class Movement : MonoBehaviour
             movementState = MovementState.Idle;
         }
 
+
+
         //jump
         if (Input.GetAxis("Jump") > 0 && grounded)
         {
@@ -62,6 +71,29 @@ public class Movement : MonoBehaviour
                 walk.Play();
             time = Time.time;
         }
+
+        if(ClimbingAllowed)
+        {
+            if (verticalInput != 0)
+            {
+                movementState = MovementState.Climbing;
+                rb.isKinematic = true;
+                
+            }
+            if(movementState == MovementState.Climbing)
+            {
+                rb.velocity = new Vector2(horizontalInput, verticalInput)*climbingSpeed;
+            }
+            
+            
+
+        } 
+        else
+        {
+            movementState = MovementState.Idle;
+            rb.isKinematic = false;
+        
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -69,6 +101,7 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             grounded = true;
+            rb.isKinematic = false;
         }
     }
 }
