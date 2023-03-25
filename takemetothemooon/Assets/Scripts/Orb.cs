@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
+using System;
+
 
 public class Orb : MonoBehaviour
 {
@@ -13,6 +15,14 @@ public class Orb : MonoBehaviour
     private bool isClicked = false;
     private bool isFollowing = false;
 
+    public Action<string> OnOrbClicked;
+    public Action<string> OnOrbCollected;
+
+
+    void Start()
+    {
+        player = GameObject.Find("Player");
+    }
     void OnMouseEnter()
     {
         if (!isClicked && isFollowing)
@@ -30,7 +40,9 @@ public class Orb : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(isFollowing){
+        if(isFollowing)
+        {
+            OnOrbClicked?.Invoke(name);
             StartCoroutine(OnClick());
         }
     }
@@ -38,7 +50,6 @@ public class Orb : MonoBehaviour
     IEnumerator OnClick()
     {
         isClicked = true;
-        player.GetComponent<Player>().Talk(orbName);
         GetComponent<SpriteRenderer>().color = Color.green;
         yield return new WaitForSeconds(1f);
         GetComponent<SpriteRenderer>().color = startColor;
@@ -49,20 +60,20 @@ public class Orb : MonoBehaviour
     {
         if (other.name == "Player" && !isFollowing)
         {
+            OnOrbCollected?.Invoke(name);
             isFollowing = true;
-            if(collectOrb != null)
-                collectOrb.Play();
-
-            player.GetComponent<PlayerInformation>().numberOfOrbs++;
+            
             FollowPlayer();
         }
     }
 
     void FollowPlayer()
     {
+        
         FollowPlayer followPlayer = GetComponent<FollowPlayer>();
+        followPlayer.number = player.GetComponent<Player>().CollectOrb(this);
         followPlayer.enabled = true;
-        followPlayer.number = player.GetComponent<PlayerInformation>().numberOfOrbs;
+        
         
     }
 }

@@ -10,6 +10,13 @@ public class Player : MonoBehaviour
   
 
     public bool talking = false;
+
+    private PlayerInformation playerInformation;
+
+    private void Start()
+    {
+        playerInformation = GetComponent<PlayerInformation>();
+    }
     public void Talk(string orbName)
     {
         if(talking)
@@ -35,6 +42,14 @@ public class Player : MonoBehaviour
         {
             talking = false;
         }
+    }
+
+    public int CollectOrb(Orb orb)
+    {
+        playerInformation.AddOrb();
+        orb.OnOrbClicked += Talk;
+        Debug.Log("Collected Orb");
+        return playerInformation.numberOfOrbs;
     }
 
 
