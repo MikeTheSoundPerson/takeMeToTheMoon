@@ -16,6 +16,12 @@ public class NPC : MonoBehaviour
 
 
     public bool talking;
+
+    void Start()
+    {
+        player = GameObject.Find("Player")?.GetComponent<Player>();
+        DisplayOrbs();
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.name == "Player")
@@ -47,6 +53,8 @@ public class NPC : MonoBehaviour
             {
                 
                 wantedOrbs.RemoveAt(0);
+                DisplayOrbs();
+                
                 if(wantedOrbs.Count == 0)
                 {
                     Debug.Log("All orbs collected");
@@ -60,6 +68,34 @@ public class NPC : MonoBehaviour
             
             
         }
+    }
+
+    private void DisplayOrbs()
+    {
+
+        foreach(Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        int i = 0;
+        foreach(GameObject orb in wantedOrbs)
+        {
+            DisplayOrb(orb.GetComponent<Orb>(), new Vector2(i-1, 1));
+            i++;
+        }
+    }
+
+    private void DisplayOrb(Orb orb, Vector2 offset)
+    {
+        GameObject displayOrb = new GameObject();
+        displayOrb.name = orb.orbName;
+        displayOrb.AddComponent<SpriteRenderer>();
+        displayOrb.GetComponent<SpriteRenderer>().sprite = orb.orbSprite;
+
+        displayOrb.transform.position = transform.position + (Vector3)offset;
+        displayOrb.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        displayOrb.transform.parent = transform;
     }
 
     void OnEnable()

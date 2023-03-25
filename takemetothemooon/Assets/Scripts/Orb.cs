@@ -12,6 +12,8 @@ public class Orb : MonoBehaviour
     public GameObject player;
     private Color startColor;
 
+    public Sprite orbSprite;
+
     private bool isClicked = false;
     private bool isFollowing = false;
 
@@ -22,6 +24,7 @@ public class Orb : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
+        orbSprite = GetComponent<SpriteRenderer>()?.sprite;
     }
     void OnMouseEnter()
     {
@@ -72,8 +75,8 @@ public class Orb : MonoBehaviour
         
         FollowPlayer followPlayer = GetComponent<FollowPlayer>();
         followPlayer.number = player.GetComponent<Player>().CollectOrb(this);
-        followPlayer.enabled = true;
-        
-        
+        followPlayer.enabled = true;  
     }
+
+
 }

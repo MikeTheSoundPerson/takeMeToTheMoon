@@ -50,8 +50,7 @@ public class Movement : MonoBehaviour
         {
             movementState = MovementState.Jumping;
             GetComponent<Rigidbody2D>().AddForce(jumpHeight, ForceMode2D.Impulse);
-            if(jump != null)
-                jump.Play();
+            jump?.Play();
         }
 
 
