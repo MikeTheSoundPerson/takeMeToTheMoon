@@ -15,8 +15,8 @@ public class Orb : MonoBehaviour
     private bool isClicked = false;
     private bool isFollowing = false;
 
-    public Action<string> OnOrbClicked;
-    public Action<string> OnOrbCollected;
+    public Action<Orb> OnOrbClicked;
+    public Action<Orb> OnOrbCollected;
 
 
     void Start()
@@ -42,7 +42,7 @@ public class Orb : MonoBehaviour
     {
         if(isFollowing)
         {
-            OnOrbClicked?.Invoke(name);
+            OnOrbClicked?.Invoke(this);
             StartCoroutine(OnClick());
         }
     }
@@ -60,7 +60,7 @@ public class Orb : MonoBehaviour
     {
         if (other.name == "Player" && !isFollowing)
         {
-            OnOrbCollected?.Invoke(name);
+            OnOrbCollected?.Invoke(this);
             isFollowing = true;
             
             FollowPlayer();

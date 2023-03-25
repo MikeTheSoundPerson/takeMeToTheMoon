@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
+using System;
 
 public class Player : MonoBehaviour
 {
@@ -11,17 +12,20 @@ public class Player : MonoBehaviour
 
     public bool talking = false;
 
+    public Action<Orb> OnTalk;
+
     private PlayerInformation playerInformation;
 
     private void Start()
     {
         playerInformation = GetComponent<PlayerInformation>();
     }
-    public void Talk(string orbName)
+    public void Talk(Orb orb)
     {
+        OnTalk?.Invoke(orb);
         if(talking)
         {
-            Debug.Log(orbName);
+            Debug.Log(orb.name);
         }
         else
         {
