@@ -81,16 +81,23 @@ public class NPC : MonoBehaviour
         int i = 0;
         foreach(GameObject orb in wantedOrbs)
         {
-            DisplayOrb(orb.GetComponent<Orb>(), new Vector2(i-1, 1));
+            DisplayOrb(orb.GetComponent<Orb>(), new Vector2(i-1, 1), i);
             i++;
         }
     }
 
-    private void DisplayOrb(Orb orb, Vector2 offset)
+    private void DisplayOrb(Orb orb, Vector2 offset, int index = 0)
     {
         GameObject displayOrb = new GameObject();
         displayOrb.name = orb.orbName;
         displayOrb.AddComponent<SpriteRenderer>();
+        Wobble wobble = displayOrb.AddComponent<Wobble>();
+        wobble.offset = new Vector2(0, 0.2f);
+        wobble.index = index;
+        displayOrb.AddComponent<Rigidbody2D>();
+        displayOrb.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        displayOrb.GetComponent<Rigidbody2D>().gravityScale = 0;
+        displayOrb.GetComponent<Rigidbody2D>().freezeRotation = true;
         displayOrb.GetComponent<SpriteRenderer>().sprite = orb.orbSprite;
 
         displayOrb.transform.position = transform.position + (Vector3)offset;
