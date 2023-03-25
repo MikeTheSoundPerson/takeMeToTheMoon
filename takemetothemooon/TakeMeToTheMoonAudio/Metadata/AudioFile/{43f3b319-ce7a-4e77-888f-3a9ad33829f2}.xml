@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{43f3b319-ce7a-4e77-888f-3a9ad33829f2}">
+		<property name="assetPath">
+			<value>NPC/NPC_Orange_Request.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>6.0576870748299321</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a8a552bf-c07c-4d0d-9def-2e9da395803a}</destination>
+		</relationship>
+	</object>
+</objects>
