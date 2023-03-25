@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     public Vector2 jumpHeight;
     private float time = 0f;
     private Rigidbody2D rb;
+    private bool grounded = true;
     private enum MovementState { Idle, Walking, Climbing, Jumping, Falling};
 
     void Start()
@@ -46,8 +47,9 @@ public class Movement : MonoBehaviour
         }
 
         //jump
-        if (Input.GetAxis("Jump") > 0)
+        if (Input.GetAxis("Jump") > 0 && grounded)
         {
+            grounded = false;
             movementState = MovementState.Jumping;
             GetComponent<Rigidbody2D>().AddForce(jumpHeight, ForceMode2D.Impulse);
             jump?.Play();
@@ -59,6 +61,14 @@ public class Movement : MonoBehaviour
             if(walk != null)
                 walk.Play();
             time = Time.time;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            grounded = true;
         }
     }
 }
