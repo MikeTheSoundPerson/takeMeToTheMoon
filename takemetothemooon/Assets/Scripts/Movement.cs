@@ -7,6 +7,8 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] private StudioEventEmitter walk;
     [SerializeField] private StudioEventEmitter jump;
+    [SerializeField] private StudioEventEmitter climb;
+
     public float speed = 10f;
     public float climbingSpeed = 5f;
     public Vector2 jumpHeight;
@@ -17,8 +19,6 @@ public class Movement : MonoBehaviour
     private bool grounded = true;
     private enum MovementState { Idle, Walking, Climbing, Jumping, Falling};
 
-    public ParticleSystem dust;
-
     MovementState movementState = MovementState.Idle;
 
     void Start()
@@ -26,14 +26,11 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-     void CreateDust(){
-        dust.Play();
-    }
-
 
     // Update is called once per frame
     void Update()
     {
+        
         var horizontalInput = Input.GetAxisRaw("Horizontal");
         var verticalInput = Input.GetAxisRaw("Vertical");
         
@@ -42,15 +39,12 @@ public class Movement : MonoBehaviour
         //change forward direction
         if (horizontalInput > 0)
         {
-            CreateDust();
             movementState = MovementState.Walking;
             transform.rotation = Quaternion.identity;
 
         }
         else if (horizontalInput < 0)
-    
         {
-            CreateDust();
             movementState = MovementState.Walking;
             transform.rotation = Quaternion.Euler(0,180,0);
         }
@@ -67,8 +61,7 @@ public class Movement : MonoBehaviour
             grounded = false;
             movementState = MovementState.Jumping;
             GetComponent<Rigidbody2D>().AddForce(jumpHeight, ForceMode2D.Impulse);
-            jump?.Play();
-            CreateDust();
+            jump.Play();
         }
 
 
@@ -85,14 +78,13 @@ public class Movement : MonoBehaviour
             {
                 movementState = MovementState.Climbing;
                 rb.isKinematic = true;
+                climb.Play();
                 
             }
             if(movementState == MovementState.Climbing)
             {
                 rb.velocity = new Vector2(horizontalInput, verticalInput)*climbingSpeed;
             }
-            
-            
 
         } 
         else
@@ -107,11 +99,8 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            CreateDust();
             grounded = true;
             rb.isKinematic = false;
         }
     }
-
-   
 }
