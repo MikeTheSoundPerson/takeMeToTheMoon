@@ -17,6 +17,8 @@ public class Movement : MonoBehaviour
     private bool grounded = true;
     private enum MovementState { Idle, Walking, Climbing, Jumping, Falling};
 
+    public ParticleSystem dust;
+
     MovementState movementState = MovementState.Idle;
 
     void Start()
@@ -24,13 +26,14 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+     void CreateDust(){
+        dust.Play();
+    }
+
 
     // Update is called once per frame
     void Update()
     {
-        
-
-
         var horizontalInput = Input.GetAxisRaw("Horizontal");
         var verticalInput = Input.GetAxisRaw("Vertical");
         
@@ -39,12 +42,15 @@ public class Movement : MonoBehaviour
         //change forward direction
         if (horizontalInput > 0)
         {
+            CreateDust();
             movementState = MovementState.Walking;
             transform.rotation = Quaternion.identity;
 
         }
         else if (horizontalInput < 0)
+    
         {
+            CreateDust();
             movementState = MovementState.Walking;
             transform.rotation = Quaternion.Euler(0,180,0);
         }
@@ -62,6 +68,7 @@ public class Movement : MonoBehaviour
             movementState = MovementState.Jumping;
             GetComponent<Rigidbody2D>().AddForce(jumpHeight, ForceMode2D.Impulse);
             jump?.Play();
+            CreateDust();
         }
 
 
@@ -100,8 +107,11 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
+            CreateDust();
             grounded = true;
             rb.isKinematic = false;
         }
     }
+
+   
 }
