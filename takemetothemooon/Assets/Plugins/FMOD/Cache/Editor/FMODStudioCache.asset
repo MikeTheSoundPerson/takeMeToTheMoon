@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: TakeMeToTheMoonAudio/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638154295381178804
+  lastModified: 638154317099679909
   FileSizes: []
   Exists: 1
 --- !u!114 &-8450290979176429726
@@ -195,7 +195,7 @@ MonoBehaviour:
   Path: TakeMeToTheMoonAudio/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638154295381228346
+  lastModified: 638154317099684234
   FileSizes:
   - Name: 
     Value: 2094
@@ -362,6 +362,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1598168815663355468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Song
+  m_EditorClassIdentifier: 
+  Path: event:/Song
+  Guid:
+    Data1: 975305098
+    Data2: 1240828609
+    Data3: 1884632964
+    Data4: 2042583130
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 374230
 --- !u!114 &-1534025105836063946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,13 +512,13 @@ MonoBehaviour:
   - {fileID: 293072526945727337}
   - {fileID: 1277479159318563321}
   - {fileID: 1862389243106239706}
-  - {fileID: -6984620905431708306}
+  - {fileID: -1598168815663355468}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8975038132424178970}
   StringsBanks:
   - {fileID: -6084071300778731278}
-  cacheTime: 638154295381228346
+  cacheTime: 638154317099684234
   cacheVersion: 131601
 --- !u!114 &293072526945727337
 MonoBehaviour:

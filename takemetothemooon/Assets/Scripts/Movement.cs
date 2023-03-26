@@ -15,6 +15,7 @@ public class Movement : MonoBehaviour
     private float time = 0f;
     private Rigidbody2D rb;
 
+    public Animator animator;
     public bool ClimbingAllowed = false;
     private bool grounded = true;
     private enum MovementState { Idle, Walking, Climbing, Jumping, Falling};
@@ -47,6 +48,7 @@ public class Movement : MonoBehaviour
         {
             movementState = MovementState.Walking;
             transform.rotation = Quaternion.Euler(0,180,0);
+
         }
         else
         {
@@ -93,6 +95,8 @@ public class Movement : MonoBehaviour
             rb.isKinematic = false;
         
         }
+
+        animator.SetInteger("state", (int)movementState);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
