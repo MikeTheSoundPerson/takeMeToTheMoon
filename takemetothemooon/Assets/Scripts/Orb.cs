@@ -21,6 +21,8 @@ public class Orb : MonoBehaviour
     public Action<Orb> OnOrbClicked;
     public Action<Orb> OnOrbCollected;
 
+    public ParticleSystem orbParticles;
+
 
     void Start()
     {
@@ -68,6 +70,10 @@ public class Orb : MonoBehaviour
         {
             OnOrbCollected?.Invoke(this);
             isFollowing = true;
+
+            //instantiate particles
+            orbParticles = Instantiate(orbParticles, transform.position, Quaternion.identity);
+            //orbParticles?.Play();
             
             FollowPlayer();
         }

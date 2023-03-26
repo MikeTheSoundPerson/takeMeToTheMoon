@@ -19595,6 +19595,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 587978458, guid: 58536d87f5d4cdd458be1d19536dca1d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 587978460, guid: 58536d87f5d4cdd458be1d19536dca1d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8712514710127316233, guid: 58536d87f5d4cdd458be1d19536dca1d, type: 3}
       propertyPath: player
       value: 
@@ -19603,6 +19611,10 @@ PrefabInstance:
       propertyPath: orbName
       value: Test1
       objectReference: {fileID: 0}
+    - target: {fileID: 8712514710127316233, guid: 58536d87f5d4cdd458be1d19536dca1d, type: 3}
+      propertyPath: orbParticles
+      value: 
+      objectReference: {fileID: 2000779571012122356, guid: c909e9e44a2478d45bb509b19d00b175, type: 3}
     - target: {fileID: 8712514710127316233, guid: 58536d87f5d4cdd458be1d19536dca1d, type: 3}
       propertyPath: OnOrbClicked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -20079,6 +20091,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2477158219423810264, guid: bf2c233c979b51f4199c8385b6e5eb77, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.488
+      objectReference: {fileID: 0}
+    - target: {fileID: 2477158219423810264, guid: bf2c233c979b51f4199c8385b6e5eb77, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.092
+      objectReference: {fileID: 0}
     - target: {fileID: 2477158219423810265, guid: bf2c233c979b51f4199c8385b6e5eb77, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -20291,13 +20311,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 660377736}
     - target: {fileID: 8712514710127316233, guid: 58536d87f5d4cdd458be1d19536dca1d, type: 3}
-      propertyPath: orbName
-      value: Test0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8712514710127316233, guid: 58536d87f5d4cdd458be1d19536dca1d, type: 3}
-      propertyPath: OnOrbClicked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: orbParticles
       value: 
-      objectReference: {fileID: 660377743}
+      objectReference: {fileID: 2000779571012122356, guid: c909e9e44a2478d45bb509b19d00b175, type: 3}
     - target: {fileID: 8712514710127316244, guid: 58536d87f5d4cdd458be1d19536dca1d, type: 3}
       propertyPath: m_Name
       value: Orb
