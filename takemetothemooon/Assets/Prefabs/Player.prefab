@@ -313,6 +313,7 @@ MonoBehaviour:
   climbingSpeed: 5
   jumpHeight: {x: 0, y: 15}
   ClimbingAllowed: 0
+  dust: {fileID: 2087437058987385868, guid: 1797a1f25d2524ccd8de2d003252f27a, type: 3}
 --- !u!114 &8528037814367746646
 MonoBehaviour:
   m_ObjectHideFlags: 0

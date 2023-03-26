@@ -257,6 +257,7 @@ MonoBehaviour:
   player: {fileID: 0}
   orbSprite: {fileID: 0}
   orbLight: {fileID: 587978458}
+  orbParticles: {fileID: 2000779571012122356, guid: c909e9e44a2478d45bb509b19d00b175, type: 3}
 --- !u!58 &8712514710127316234
 CircleCollider2D:
   m_ObjectHideFlags: 0
