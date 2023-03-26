@@ -354,11 +354,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1099454047
+      Data2: 1282801983
+      Data3: 239121590
+      Data4: 1293000910
+    Path: event:/Player/Running
   Event: 
   PlayEvent: 0
   StopEvent: 0
@@ -367,8 +367,8 @@ MonoBehaviour:
   Preload: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!114 &8528037814367746632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,11 +384,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2057511940
+      Data2: 1121665464
+      Data3: 1276062850
+      Data4: 1488386941
+    Path: event:/Player/Jump
   Event: 
   PlayEvent: 0
   StopEvent: 0
@@ -397,8 +397,8 @@ MonoBehaviour:
   Preload: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!114 &660377744
 MonoBehaviour:
   m_ObjectHideFlags: 0

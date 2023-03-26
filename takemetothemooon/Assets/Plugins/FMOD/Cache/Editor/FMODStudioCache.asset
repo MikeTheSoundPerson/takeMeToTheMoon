@@ -1,5 +1,422 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8975038132424178970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: TakeMeToTheMoonAudio/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638153695487372302
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-8450290979176429726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Orbs/Melody1E_OneShot
+  m_EditorClassIdentifier: 
+  Path: event:/Orbs/Melody1E_OneShot
+  Guid:
+    Data1: -1996855280
+    Data2: 1080582813
+    Data3: -824913005
+    Data4: 874561171
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8255399428905515542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC_Blue_Request
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPC_Blue_Request
+  Guid:
+    Data1: 360421836
+    Data2: 1229935405
+    Data3: 688362398
+    Data4: -62977700
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7171681376798889048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/OrbCollect
+  m_EditorClassIdentifier: 
+  Path: event:/Player/OrbCollect
+  Guid:
+    Data1: -2085193239
+    Data2: 1298795406
+    Data3: -534736716
+    Data4: 165821260
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7145588164120708273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Orbs/BassG_OneShot
+  m_EditorClassIdentifier: 
+  Path: event:/Orbs/BassG_OneShot
+  Guid:
+    Data1: -381404636
+    Data2: 1221584289
+    Data3: -1518766705
+    Data4: 1671163583
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6477635557221961100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Orbs/Melody2E_OneShot
+  m_EditorClassIdentifier: 
+  Path: event:/Orbs/Melody2E_OneShot
+  Guid:
+    Data1: 298426318
+    Data2: 1165566494
+    Data3: -1176431201
+    Data4: -2038402826
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6084071300778731278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: TakeMeToTheMoonAudio/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638153695487396755
+  FileSizes:
+  - Name: 
+    Value: 2060
+  Exists: 1
+--- !u!114 &-4791274005482119323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Orbs/Kick_OneShot
+  m_EditorClassIdentifier: 
+  Path: event:/Orbs/Kick_OneShot
+  Guid:
+    Data1: 1495323537
+    Data2: 1247634703
+    Data3: -2012417622
+    Data4: -219506368
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4566975645731475985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Orbs/Melody1G_OneShot
+  m_EditorClassIdentifier: 
+  Path: event:/Orbs/Melody1G_OneShot
+  Guid:
+    Data1: -608233858
+    Data2: 1340058828
+    Data3: -681010245
+    Data4: 554146076
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4385438227802549203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC_Orange_Thanks
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPC_Orange_Thanks
+  Guid:
+    Data1: -1753123660
+    Data2: 1142763992
+    Data3: 628117148
+    Data4: -1645128155
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3845272985637873104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Orbs/HarmonyC_OneShot
+  m_EditorClassIdentifier: 
+  Path: event:/Orbs/HarmonyC_OneShot
+  Guid:
+    Data1: -1211836526
+    Data2: 1137091181
+    Data3: 1018292910
+    Data4: -1095523411
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2788322414434083245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Running
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Running
+  Guid:
+    Data1: -1099454047
+    Data2: 1282801983
+    Data3: 239121590
+    Data4: 1293000910
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2123047474801685335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC_Orange_Request
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPC_Orange_Request
+  Guid:
+    Data1: 1338332023
+    Data2: 1300551186
+    Data3: 404930444
+    Data4: -1169706827
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1534025105836063946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Orbs/BassE_OneShot
+  m_EditorClassIdentifier: 
+  Path: event:/Orbs/BassE_OneShot
+  Guid:
+    Data1: -2031789212
+    Data2: 1171157469
+    Data3: 1624499345
+    Data4: 787966352
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1039302842176223738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  Guid:
+    Data1: -766212494
+    Data2: 1168297924
+    Data3: -1997084228
+    Data4: -1425127133
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 4099207144388984224}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 252692
+--- !u!114 &-787645441235026757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Orbs/Melody2G_OneShot
+  m_EditorClassIdentifier: 
+  Path: event:/Orbs/Melody2G_OneShot
+  Guid:
+    Data1: -1523350681
+    Data2: 1188787683
+    Data3: 1467507372
+    Data4: 1016947265
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,10 +429,366 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks: []
-  EditorEvents: []
+  EditorBanks:
+  - {fileID: -6084071300778731278}
+  - {fileID: -8975038132424178970}
+  EditorEvents:
+  - {fileID: 4699701956375588249}
+  - {fileID: -8450290979176429726}
+  - {fileID: 4909924671899489345}
+  - {fileID: -7145588164120708273}
+  - {fileID: 2726124965905695913}
+  - {fileID: 3683195946029621263}
+  - {fileID: -1534025105836063946}
+  - {fileID: -787645441235026757}
+  - {fileID: -1039302842176223738}
+  - {fileID: -2123047474801685335}
+  - {fileID: 4824904881475551119}
+  - {fileID: -4566975645731475985}
+  - {fileID: 3663625000324588844}
+  - {fileID: 3002615317716607787}
+  - {fileID: -4791274005482119323}
+  - {fileID: -3845272985637873104}
+  - {fileID: -2788322414434083245}
+  - {fileID: -4385438227802549203}
+  - {fileID: 4045698619351603064}
+  - {fileID: -8255399428905515542}
+  - {fileID: -6477635557221961100}
+  - {fileID: -7171681376798889048}
+  - {fileID: 293072526945727337}
+  - {fileID: 1277479159318563321}
+  - {fileID: 1862389243106239706}
   EditorParameters: []
-  MasterBanks: []
-  StringsBanks: []
-  cacheTime: 0
+  MasterBanks:
+  - {fileID: -8975038132424178970}
+  StringsBanks:
+  - {fileID: -6084071300778731278}
+  cacheTime: 638153695487396755
   cacheVersion: 131601
+--- !u!114 &293072526945727337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Orbs/HarmonyD_OneShot
+  m_EditorClassIdentifier: 
+  Path: event:/Orbs/HarmonyD_OneShot
+  Guid:
+    Data1: 1841695214
+    Data2: 1286702873
+    Data3: 582687411
+    Data4: 1572533170
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1277479159318563321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC_Red_Request
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPC_Red_Request
+  Guid:
+    Data1: -377775376
+    Data2: 1205783989
+    Data3: -50763621
+    Data4: -34538558
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1862389243106239706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Jump
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Jump
+  Guid:
+    Data1: -2057511940
+    Data2: 1121665464
+    Data3: 1276062850
+    Data4: 1488386941
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2726124965905695913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/LadderClimb
+  m_EditorClassIdentifier: 
+  Path: event:/Player/LadderClimb
+  Guid:
+    Data1: -655686085
+    Data2: 1126689505
+    Data3: 946118274
+    Data4: 1152205587
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3002615317716607787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC_Green_Request
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPC_Green_Request
+  Guid:
+    Data1: -2021366397
+    Data2: 1229787486
+    Data3: -335490889
+    Data4: 1659037580
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3663625000324588844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC_Blue_Thanks
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPC_Blue_Thanks
+  Guid:
+    Data1: 621222530
+    Data2: 1084375408
+    Data3: -317180740
+    Data4: 271850337
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3683195946029621263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Orbs/HarmonyE_OneShot
+  m_EditorClassIdentifier: 
+  Path: event:/Orbs/HarmonyE_OneShot
+  Guid:
+    Data1: -1060423857
+    Data2: 1201191882
+    Data3: -521908036
+    Data4: -1182218183
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4045698619351603064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Orbs/Hat_OneShot
+  m_EditorClassIdentifier: 
+  Path: event:/Orbs/Hat_OneShot
+  Guid:
+    Data1: -801859908
+    Data2: 1203886837
+    Data3: -31403090
+    Data4: -759635417
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4099207144388984224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/MusicAdd
+  m_EditorClassIdentifier: 
+  Name: MusicAdd
+  StudioPath: 
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 2428694001
+    data2: 968452308
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Drone 1
+  - Drums
+  - Bass
+  - Melody
+  - Harmony
+  - Drone 2
+  Exists: 1
+--- !u!114 &4699701956375588249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC_Green_Thanks
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPC_Green_Thanks
+  Guid:
+    Data1: 920066562
+    Data2: 1238152048
+    Data3: -402311234
+    Data4: 1070002490
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4824904881475551119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NPC/NPC_Red_Thanks
+  m_EditorClassIdentifier: 
+  Path: event:/NPC/NPC_Red_Thanks
+  Guid:
+    Data1: -257275525
+    Data2: 1235233014
+    Data3: -1411532110
+    Data4: -512460657
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4909924671899489345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Orbs/HarmonyG_OneShot
+  m_EditorClassIdentifier: 
+  Path: event:/Orbs/HarmonyG_OneShot
+  Guid:
+    Data1: -2107352554
+    Data2: 1153938712
+    Data3: -807327571
+    Data4: 585565380
+  Banks:
+  - {fileID: -8975038132424178970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
