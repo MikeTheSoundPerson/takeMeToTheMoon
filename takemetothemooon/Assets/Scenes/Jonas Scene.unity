@@ -19677,15 +19677,15 @@ PrefabInstance:
       objectReference: {fileID: 660377740}
     - target: {fileID: 8712514710127316247, guid: 58536d87f5d4cdd458be1d19536dca1d, type: 3}
       propertyPath: m_Color.b
-      value: 0.05406728
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8712514710127316247, guid: 58536d87f5d4cdd458be1d19536dca1d, type: 3}
       propertyPath: m_Color.g
-      value: 0.764151
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8712514710127316247, guid: 58536d87f5d4cdd458be1d19536dca1d, type: 3}
       propertyPath: m_Color.r
-      value: 0.26266676
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58536d87f5d4cdd458be1d19536dca1d, type: 3}
@@ -20310,10 +20310,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 660377736}
-    - target: {fileID: 8712514710127316233, guid: 58536d87f5d4cdd458be1d19536dca1d, type: 3}
-      propertyPath: orbParticles
-      value: 
-      objectReference: {fileID: 2000779571012122356, guid: c909e9e44a2478d45bb509b19d00b175, type: 3}
     - target: {fileID: 8712514710127316244, guid: 58536d87f5d4cdd458be1d19536dca1d, type: 3}
       propertyPath: m_Name
       value: Orb
