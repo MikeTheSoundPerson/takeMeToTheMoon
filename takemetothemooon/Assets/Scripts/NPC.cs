@@ -6,7 +6,14 @@ using System;
 
 public class NPC : MonoBehaviour
 {
-    [SerializeField] private StudioEventEmitter NPCTalk;
+    [SerializeField] private StudioEventEmitter NPCGreenRequest;
+    [SerializeField] private StudioEventEmitter NPCGreenThanks;
+    [SerializeField] private StudioEventEmitter NPCRedRequest;
+    [SerializeField] private StudioEventEmitter NPCRedThanks;
+    [SerializeField] private StudioEventEmitter NPCOrangeRequest;
+    [SerializeField] private StudioEventEmitter NPCOrangeThanks;
+    [SerializeField] private StudioEventEmitter NPCBlueRequest;
+    [SerializeField] private StudioEventEmitter NPCBlueThanks;
 
     public Player player;
 
@@ -27,7 +34,7 @@ public class NPC : MonoBehaviour
         if(other.name == "Player")
         {
             talking = true;
-            NPCTalk?.Play();
+            NPCGreenRequest.Play();
         }
     }
     void OnTriggerExit2D(Collider2D other)

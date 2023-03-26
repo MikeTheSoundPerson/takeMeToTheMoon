@@ -7,6 +7,8 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] private StudioEventEmitter walk;
     [SerializeField] private StudioEventEmitter jump;
+    [SerializeField] private StudioEventEmitter climb;
+
     public float speed = 10f;
     public float climbingSpeed = 5f;
     public Vector2 jumpHeight;
@@ -29,8 +31,6 @@ public class Movement : MonoBehaviour
     void Update()
     {
         
-
-
         var horizontalInput = Input.GetAxisRaw("Horizontal");
         var verticalInput = Input.GetAxisRaw("Vertical");
         
@@ -61,7 +61,7 @@ public class Movement : MonoBehaviour
             grounded = false;
             movementState = MovementState.Jumping;
             GetComponent<Rigidbody2D>().AddForce(jumpHeight, ForceMode2D.Impulse);
-            jump?.Play();
+            jump.Play();
         }
 
 
@@ -78,14 +78,13 @@ public class Movement : MonoBehaviour
             {
                 movementState = MovementState.Climbing;
                 rb.isKinematic = true;
+                climb.Play();
                 
             }
             if(movementState == MovementState.Climbing)
             {
                 rb.velocity = new Vector2(horizontalInput, verticalInput)*climbingSpeed;
             }
-            
-            
 
         } 
         else
