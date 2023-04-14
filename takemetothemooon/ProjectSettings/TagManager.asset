@@ -7,6 +7,7 @@ TagManager:
   - NPC
   - Ground
   - Foreground
+  - Ladder
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - UI
   - PostP
   - Foreground
-  - 
-  - 
+  - Ground
+  - Player
   - 
   - 
   - 
@@ -41,9 +42,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackBackground
+    uniqueID: 1374678925
+    locked: 0
+  - name: Background
+    uniqueID: 847090807
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Foreground
     uniqueID: 807027367
+    locked: 0
+  - name: FrontForeground
+    uniqueID: 498418037
     locked: 0

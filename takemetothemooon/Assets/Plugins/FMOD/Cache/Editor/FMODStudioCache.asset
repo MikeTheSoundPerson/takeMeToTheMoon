@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: TakeMeToTheMoonAudio/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638154295381178804
+  lastModified: 638154319785369402
   FileSizes: []
   Exists: 1
 --- !u!114 &-8450290979176429726
@@ -195,7 +195,7 @@ MonoBehaviour:
   Path: TakeMeToTheMoonAudio/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638154295381228346
+  lastModified: 638154319785369402
   FileSizes:
   - Name: 
     Value: 2094
@@ -491,7 +491,7 @@ MonoBehaviour:
   - {fileID: -8975038132424178970}
   StringsBanks:
   - {fileID: -6084071300778731278}
-  cacheTime: 638154295381228346
+  cacheTime: 638154319785369402
   cacheVersion: 131601
 --- !u!114 &293072526945727337
 MonoBehaviour:

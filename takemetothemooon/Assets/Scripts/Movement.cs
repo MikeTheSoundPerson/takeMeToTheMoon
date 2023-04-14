@@ -15,6 +15,8 @@ public class Movement : MonoBehaviour
     private float time = 0f;
     private Rigidbody2D rb;
 
+    public Animator animator;
+
     public bool ClimbingAllowed = false;
     private bool grounded = true;
     private enum MovementState { Idle, Walking, Climbing, Jumping, Falling};
@@ -26,9 +28,19 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    void Update()
+    {
+        if (Input.GetAxis("Jump") > 0 && grounded)
+        {
+            grounded = false;
+            movementState = MovementState.Jumping;
+            GetComponent<Rigidbody2D>().AddForce(jumpHeight, ForceMode2D.Impulse);
+            jump?.Play();
+        }
+    }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
         var horizontalInput = Input.GetAxisRaw("Horizontal");
@@ -56,13 +68,7 @@ public class Movement : MonoBehaviour
 
 
         //jump
-        if (Input.GetAxis("Jump") > 0 && grounded)
-        {
-            grounded = false;
-            movementState = MovementState.Jumping;
-            GetComponent<Rigidbody2D>().AddForce(jumpHeight, ForceMode2D.Impulse);
-            jump.Play();
-        }
+        
 
 
         if (movementState == MovementState.Walking && Time.time >= time + 0.2f)
@@ -93,6 +99,8 @@ public class Movement : MonoBehaviour
             rb.isKinematic = false;
         
         }
+
+        animator.SetInteger("state", (int)movementState);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -103,4 +111,7 @@ public class Movement : MonoBehaviour
             rb.isKinematic = false;
         }
     }
+
+
+
 }
