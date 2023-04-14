@@ -139,14 +139,18 @@ public class ImprovedMovement : MonoBehaviour
                 if(vertical > 0)
                 {
                     newPos = transform.position + forwardDirection * Time.deltaTime * climbSpeed;
-                    Debug.Log("newPos: " + newPos);
+                    Debug.Log("newPos: " + newPos + forwardDirection * Time.deltaTime * climbSpeed);
                 }
                 else if(vertical < 0)
                 {
                     newPos = transform.position - forwardDirection * Time.deltaTime * climbSpeed;
-                    Debug.Log("newPos: " + newPos);
+                    Debug.Log("newPos: " + newPos + forwardDirection * Time.deltaTime * climbSpeed);
                 }
-                if (newPos != Vector3.zero) rb.MovePosition(newPos);
+                if (newPos != Vector3.zero) 
+                {
+                    rb.velocity = Vector2.zero;
+                    rb.MovePosition(newPos);
+                }
             }
         }
     }
